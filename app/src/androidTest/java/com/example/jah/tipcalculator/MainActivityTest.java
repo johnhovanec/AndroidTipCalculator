@@ -1400,6 +1400,194 @@ public class MainActivityTest {
 
     }
 
+    @Test
+    public void p2_NumOfRepeatedChars_2_Test() {
+        ViewInteraction appCompatEditText = onView(
+                allOf(withId(R.id.editText),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText.perform(click());
+
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.editText),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText2.perform(replaceText("94.50"), closeSoftKeyboard());
+
+        ViewInteraction appCompatEditText3 = onView(
+                allOf(withId(R.id.splitNumber),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText3.perform(replaceText("111"), closeSoftKeyboard());
+
+        ViewInteraction appCompatButton = onView(
+                allOf(withId(R.id.fifteenPercent), withText("15%"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatButton.perform(click());
+
+        ViewInteraction appCompatEditText4 = onView(
+                allOf(withId(R.id.splitNumber), withText("111"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText4.perform(pressImeActionButton());
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.textView), withText("$14.18"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                7),
+                        isDisplayed()));
+        textView.check(matches(withText("$14.18")));
+
+        ViewInteraction textView2 = onView(
+                allOf(withId(R.id.tipAndTotalView), withText("$108.68"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                9),
+                        isDisplayed()));
+        textView2.check(matches(withText("$108.68")));
+
+        ViewInteraction textView3 = onView(
+                allOf(withId(R.id.totalView), withText("$0.98 each."),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                11),
+                        isDisplayed()));
+        textView3.check(matches(withText("$0.98 each.")));
+
+        ViewInteraction textView5 = onView(
+                allOf(withId(R.id.totalView), withText("$0.98 each."),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                11),
+                        isDisplayed()));
+        textView5.check(matches(withText("$0.98 each.")));
+
+    }
+
+    @Test
+    public void p2_NumOfRepeatedChars_3_Test() {
+        ViewInteraction appCompatEditText = onView(
+                allOf(withId(R.id.editText),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText.perform(click());
+
+        ViewInteraction appCompatEditText2 = onView(
+                allOf(withId(R.id.editText),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                0),
+                        isDisplayed()));
+        appCompatEditText2.perform(replaceText("94.50"), closeSoftKeyboard());
+
+        ViewInteraction appCompatEditText3 = onView(
+                allOf(withId(R.id.splitNumber),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText3.perform(replaceText("1111"), closeSoftKeyboard());
+
+        ViewInteraction appCompatButton = onView(
+                allOf(withId(R.id.fifteenPercent), withText("15%"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                3),
+                        isDisplayed()));
+        appCompatButton.perform(click());
+
+        ViewInteraction appCompatEditText4 = onView(
+                allOf(withId(R.id.splitNumber), withText("1111"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                1),
+                        isDisplayed()));
+        appCompatEditText4.perform(pressImeActionButton());
+
+        ViewInteraction textView = onView(
+                allOf(withId(R.id.textView), withText("$14.18"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                7),
+                        isDisplayed()));
+        textView.check(matches(withText("$14.18")));
+
+        ViewInteraction textView2 = onView(
+                allOf(withId(R.id.tipAndTotalView), withText("$108.68"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                9),
+                        isDisplayed()));
+        textView2.check(matches(withText("$108.68")));
+
+        ViewInteraction textView3 = onView(
+                allOf(withId(R.id.totalView), withText("$0.10 each."),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                11),
+                        isDisplayed()));
+        textView3.check(matches(withText("$0.10 each.")));
+
+        ViewInteraction textView5 = onView(
+                allOf(withId(R.id.totalView), withText("$0.10 each."),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(android.R.id.content),
+                                        0),
+                                11),
+                        isDisplayed()));
+        textView5.check(matches(withText("$0.10 each.")));
+
+    }
+
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
