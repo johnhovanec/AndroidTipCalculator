@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="app_err">Error in amount, please enter amount again</string>
+</resources>
